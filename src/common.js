@@ -41,29 +41,13 @@ function showNavi() {
 //아코디언
 
 
-$('.ham-title').click(function(){
-  let value = $(this).hasClass('open');
-  //클래스가 있다 (열려있다 => 닫혀야한다)
-  if(value){
-    $(this).removeClass('open')
-    $(this).next().slideUp();
-
-    //클래스가 없다 (닫혀있다 => 열어야한다.)
-  }else{
-    $(this).addClass('open');
-    $(this).parent().siblings().children('h2').removeClass('open');
-    $(this).parent().siblings().children('ul.submenu').slideUp();
-    $(this).next().slideDown();
-  }
-})
 
 
+  const acTitles = document.querySelectorAll('.ham-title');
+  //const contents = document.querySelectorAll('.content');
+  //const bxs = document.querySelectorAll('.bx');
 
-  //const acTitles = document.querySelectorAll('.ham-title');
-  // const contents = document.querySelectorAll('.content');
-  // const bxs = document.querySelectorAll('.bx');
-
-  /*acTitles.forEach(function(title, index){
+  acTitles.forEach(function(title, index){
       title.addEventListener('click', function(){
           const content = title.nextElementSibling.nextElementSibling; 
           // console.log(content);
@@ -80,5 +64,5 @@ $('.ham-title').click(function(){
               firstI.classList.remove('bx-chevron-up');
           }  
       })
-  })*/
+  })
 });
