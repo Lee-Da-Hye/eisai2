@@ -1,0 +1,262 @@
+.titleImg{
+    background-image: url('/htdocs/images/hhc/sv01.jpg');
+}
+
+.title-contents > p{
+    width: 100px;
+    height: 65px;
+    margin: 0 auto;
+    color: transparent;
+}
+
+.title-contents > .humanCare{
+    font-size: 20px;
+    font-style: italic;
+}
+
+.title-contents p img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.hhc{
+    text-align: center;
+    padding-bottom: 85px;
+}
+
+.hhc > h2{
+    font-size: 40px;
+    padding-bottom: 35px;
+}
+
+.hhc p:nth-of-type(1){
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.hhc p:nth-of-type(2){
+    display: inline-block;
+    border: 1px solid #000;
+    width: 150px;
+    height: 1px;
+
+}
+
+.hhc-contents{
+    text-align: center;
+    line-height: 1.7;
+    white-space: pre-line;
+    padding: 15px;
+}
+
+.hhc-contents > li:nth-child(1){
+    font-size: 25px;
+}
+
+.hhc-contents > li:nth-child(1)~li{
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.section03{
+    width: 100%;
+    background-color: #f5f6f8;
+    position: relative;
+    overflow: hidden;
+}
+
+.tab-video-inner{
+    height: 900px;
+    /* 하위 div 가 absolute에 height지정 안되었다면 
+    상위 div의 height는 0. (하위 div내에 컨텐츠가 있어도) */
+}
+
+input[name=video-menu]{
+    display: none;
+}
+
+.video-movie{
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    z-index: 1;
+    top: 150px;
+    width: 100%;
+}
+
+video{
+    width: 100%;
+}
+
+.video-btn{
+    position: absolute;
+    /* transform: translateY(550%); */
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+    top: 15px;
+}
+
+.video-btn label:nth-child(1),
+.video-btn label:nth-child(2){
+    cursor: pointer;
+    display: inline-block;
+    width: 300px;
+    height: 130px;
+    border: 1px solid #fff;
+    background-color: #000;
+    background-image: url('/htdocs/images/hhc/list2.png');
+    background-position: center center;
+    background-size: cover;
+}
+.video-btn label:nth-child(2){
+    background-image: url('/htdocs/images/hhc/list.png');
+}
+
+input[id=video1]:checked ~ .btn label[for=video1],
+input[id=video2]:checked ~ .btn label[for=video2] {
+    background-color: #000;
+}
+
+input[id=video1]:checked ~ .video-movie1,
+input[id=video2]:checked ~ .video-movie2{
+    opacity: 1;
+    visibility: visible;
+}
+
+.video-box{
+    display: flex;
+    justify-content: center;
+}
+
+.hhc-activ{
+    background-color: #f5f6f8;
+}
+
+.hhc-activ p:nth-child(1){
+    padding-top: 122px;
+    font-weight: 900;
+    font-size: 30px;
+    color: #007caa;
+}
+
+.hhc-activ p:nth-child(2){
+    padding-top: 30px;
+    color: #dceaef;
+    font-size: 100px;
+}
+
+.section04 p{
+    text-align: center;
+}
+
+.section04 .youtube-movie{
+    display: flex;
+    gap: 10px;
+    padding-top: 100px;
+    justify-content: center;
+}
+
+.youtube-video{
+    width: 600px;
+}
+
+.iframe-container{
+    position: relative;
+    width: 100%;
+    height: 0;
+}
+
+.iframe16To9{
+    padding-top: 56.25%;
+}
+
+.iframe-container iframe{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.youtube-video > div > span{
+    font-size: 14px;
+}
+
+.activ > p{
+   padding-top: 100px;
+   padding-bottom: 160px;
+}
+
+.activ > p > a{
+    font-size: 15px;
+    border: 1px solid #c5006d;
+    color: #c5006d;
+    padding: 15px;
+    transition: 0.3s;
+    font-weight: 900;
+}
+
+.activ > p > a:hover{
+    background-color: #c6006d2f;
+}
+
+@media screen and (max-width:1101px) {
+    .hhc-contents > li:nth-child(1){
+        font-size: 20px;
+    }
+    .hhc-contents > li:nth-child(1)~li{
+        font-size: 15px;
+    }
+    .section03{
+        height: auto;
+    }
+    .tab-video-inner{
+        height: 800px;
+    }
+    .hhc-activ p:nth-child(2){
+        font-size: 60px;
+    }
+}
+@media screen and (max-width: 901px) {
+    .video-btn{
+        top: 80%;
+    }
+    .tab-video-inner{
+        height: 800px;
+    }
+    .video-btn label:nth-child(1),
+    .video-btn label:nth-child(2){
+        width: 150px;
+        height: 90px;
+    }
+
+}
+@media screen and (max-width: 480px) {
+    .hhc-contents > li:nth-child(1){
+        font-size: 19px;
+        font-weight: 300;
+    }
+    .hhc-contents > li:nth-child(1)~li{
+        font-size: 14px;
+        padding: 0 20px;
+    }
+    .tab-video-inner{
+        height: 500px;
+    }
+    .hhc-activ p:nth-child(1){
+        font-size: 18px;
+    }
+    .hhc-activ p:nth-child(2){
+        font-size: 30px;
+    }
+    .hhc-activ p:nth-child(2) img{
+        width: 65px;
+    }
+    
+    
+}

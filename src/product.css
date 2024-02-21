@@ -1,0 +1,279 @@
+.titleImg{
+    background-image: url('/htdocs/images/product/sv02.jpg');
+
+}
+
+.introduce{
+    text-align: center;
+}
+
+.introduce h1{
+    font-size: 40px;
+}
+
+.introduce p{
+    padding-top: 20px;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-wrap{
+    width: 100%;
+}
+
+.product-wrap{
+    padding-top: 50px;
+}
+
+select{
+    padding-right: 40px;
+    font-size: 20px;
+    border: none;
+    border-bottom: 2px solid #000;
+    height: 30px;
+    text-align: center;
+    cursor: pointer;
+    color: #333;
+    
+}
+
+input{
+    border: none;
+    border-bottom: 2px solid #000;
+    width: 500px;
+    height: 30px;
+    background-image: url(/htdocs/images/product/icon_search.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+input::placeholder{
+    font-size: 18px;
+    text-align: justify;
+}
+
+.product-kind-wrap{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.product-content{
+    float: left;
+    padding-right: 30px;
+    margin: 80px auto;
+}
+
+.product-content > h3{
+    font-size: 30px;
+    padding-bottom: 50px;
+}
+
+.product-content > p{
+    font-size: 17px;
+    line-height: 2;
+}
+
+ .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 225px 225px 225px;
+    grid-gap: 20px;
+}
+
+.kind{
+    /* border: 1px solid black; */
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.kind-inner{
+    position: absolute;
+    top: 0;
+    transition: 0.5s;
+    width: 100%;
+    height: 100%;
+}
+
+.kind:hover>.kind-inner{
+    top: -100%;
+}
+
+.font-among{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.item1{
+    grid-row: span 2;
+    background-color: #99a0c8;
+}
+
+.item1,
+.item4,
+.item7{
+    grid-column: span 2;
+}
+
+.item4{
+    background-color: #c6006d;
+}
+
+.item7{
+    background-color: #af45c8;
+}
+
+.size{
+    height: 100%;
+    width: 100%;
+}
+
+.pdt01{
+    background-color: #001ABF;
+}
+
+.pdt01-box{
+    background-color: #00169b;
+}
+
+.pdt02{
+    background-color: #85ddf3;
+}
+
+.pdt02-box{
+    background-color: #78c3d5;
+}
+
+.pdt03{
+    background-color: #70baf3;
+}
+
+.pdt03-box{
+    background-color: #98bedb;
+}
+
+.pdt04{
+    background-color: #c6006d;
+} 
+
+.pdt04-box{
+    background-color: #b10062;
+}
+
+.pdt05{
+    background-color:#f68d13;
+}
+
+.pdt05-box{
+    background-color: #df8213;
+}
+
+.pdt06{
+    background-color: #38c982;
+}
+
+.pdt06-box{
+    background-color: #1b8852;
+}
+
+.pdt07{
+    background-color: #af45c8;
+}
+
+.pdt07-box{
+    background-color: #632771;
+}
+
+.box{
+    background-image: url(/htdocs/images/product/btn_more.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 30px;
+}
+
+
+@media screen and (max-width:1101px) {
+    .product-content{
+        float: none; 
+    }
+}
+@media screen and (max-width: 767px) {
+    .section01{
+        height: 260px;
+    }
+    .title-contents{
+        padding-top: 90px;
+    }
+    .title-contents > p{
+        font-size: 30px;
+    }
+    .section02{
+        padding: 15px;
+    }
+    select{
+        font-size: 14px;
+        text-align: left;
+        width: 100%;
+    }
+    
+    input{
+        margin-top: 10px;
+        background-size: 20px;
+        width: 100%;
+    }
+    input::placeholder{
+        font-size: 14px;
+        padding-left: 0;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(6, 300px);
+        grid-gap: 20px;
+     }
+     .product-kind-wrap{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+     .product-content > h3{
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
+    .product-content > p{
+        font-size: 13px;
+    }
+    .product-content > p > br{
+        display: none;
+    }
+    .introduce h1{
+        font-size: 20px;
+    }
+    .introduce p{
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 501px) {
+    .section02{
+        padding: 15px;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(6, 200px);
+        grid-gap: 20px;
+     }
+     form{
+        flex-wrap: wrap;
+    }
+}

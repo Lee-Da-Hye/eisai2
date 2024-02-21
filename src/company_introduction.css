@@ -1,0 +1,126 @@
+
+/*title*/
+
+.titleImg{
+    background-image: url('/htdocs/images/company_introduction/sv04.jpg');
+}
+
+
+/*company*/
+.company{
+    text-align: center;
+    padding-bottom: 85px;
+}
+.company > h2{
+    font-size: 40px;
+    padding-bottom: 35px;
+}
+
+.company > p{
+    display: inline-block;
+    border: 1px solid #000;
+    width: 150px;
+    height: 1px;
+
+}
+.company-content{
+    line-height: 1.6;
+    font-size: 17px;
+    color: #333;
+    text-align: justify;
+}
+.company-content > ul{
+    display: grid;
+    grid-template-columns: 1fr repeat(2,1fr) 5%;
+	grid-template-rows: repeat(3, 300px);
+    grid-gap: 40px;
+    justify-items: baseline;
+}
+.company-content > ul > li > img{
+    width: 100%;
+}
+.item1{
+    grid-row: span 2;
+}
+.item1 p:nth-of-type(1){
+    color: #ccc;
+    font-weight: bold;
+    white-space: nowrap;
+}
+.item1  p:nth-of-type(2){
+    font-size: 35px;
+    font-weight: bold;
+}
+.item1 > p{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.item2{
+    grid-column: span 3;
+
+}
+.item2 > p{
+    font-size: 25px;
+    color: #007caa;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+@media screen and (max-width: 1100px) {
+    .company-content > ul{
+        padding: 10px;
+        grid-template-columns: 1fr repeat(2,1fr) 2%;
+        grid-template-rows: 250px 300px 500px;
+    }
+}
+@media screen and (max-width: 860px) {
+    .company-content > ul{
+        display: grid;
+        grid-template-columns: repeat(3, 200px);
+        grid-template-rows: repeat(5, 200px) auto;
+        
+    }
+    .item1{
+        grid-row: 1 / span 2;
+    }
+    .item2{
+        grid-column: 2 / 4;
+    }
+    .item3{
+        grid-column: 2 / 4;
+        padding-top: 30px;
+    }
+    .item4{
+        grid-column: 2 / 4;
+        grid-row: 4;
+    }
+}
+@media screen and (max-width: 767px) {
+    .company > h2{
+        font-size: 25px;
+    }
+    .company > p {
+        width: 50px;
+        height: 1px;
+    }
+    .company-content > ul{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .item1{
+        padding-left: 10px;
+        display: flex;
+        gap: 10px;
+    }
+    .item2 > p{
+        font-size: 20px;
+    }
+    .ceo-name{
+        padding-top: 113%;
+    }
+    ul > li.item1 > img {
+        width: 60%;
+        object-fit: contain;
+
+    }
+
+}
