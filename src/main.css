@@ -320,7 +320,16 @@ aside li a.active{
 .sec05-img p:nth-child(2){
     font-weight: 400;
 }
+.sec02-inner{
+    text-align: center;
+    padding-top: 100px;
+}
+@media screen and (max-width:1305px) {
+    .sec02-inner{
+        padding-top: 0;
+    }
 
+}
 @media screen and (max-width:1101px) {
     .sec05-inner1{
         padding: 20px;
@@ -353,10 +362,10 @@ aside li a.active{
         width: 100%;
     }
     .article strong{
-        font-size: 25px;
+        font-size: 20px;
     }
     .article p{
-        font-size: 18px;
+        font-size: 14px;
     }
     .sec05-more{
         font-size: 15px;
